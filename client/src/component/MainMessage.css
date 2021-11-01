@@ -1,0 +1,6 @@
+.main_message {    
+
+    padding: 30px;
+    background-color: #FFF;
+    overflow-y: scroll;
+}

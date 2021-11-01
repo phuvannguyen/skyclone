@@ -1,0 +1,114 @@
+.user_info {
+    display: flex;
+    justify-content: space-between;
+    border-right: solid 1px lightgray;
+    padding: 15px;
+        
+    
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    
+    
+}
+
+.name_status {
+    align-self: center;
+    padding-left: 10px;
+
+    
+}
+
+.name_status > h2 {
+    font-size: 16px;
+
+}
+
+.name_status > p {
+    font-size: 12px;
+    font-weight: 600;
+    color: #99A799
+    
+}
+
+.MuiSvgIcon-fontSizeMedium {
+    align-self: center;
+}
+
+.MuiSvgIcon-fontSizeMedium:hover {
+    color: #99A799
+    
+    
+}
+
+/* style search */
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px 5px 0px;
+
+    
+
+}
+
+.search > .MuiSvgIcon-root {
+    background-color: #fff;
+    border-radius: 5px;
+    height: calc(100%);
+    
+    
+}
+
+.search_container {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    width: calc(100% - 40px);    
+    border: none;
+    padding: 5px 0;    
+    
+}
+
+.search_container > .MuiSvgIcon-root {
+    padding-left: 5px;
+    color: #000;
+    font-size: 25px;    
+}
+
+.search_container > form > input {
+    margin-left: 10px;    
+    outline: none;
+    border: none
+
+}
+
+/* style icon */
+.icon {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat, .contacts, .Notifications {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+}
+
+.chat > .MuiSvgIcon-root, .contacts > .MuiSvgIcon-root,
+.Notifications > .MuiSvgIcon {
+    font-size: 124px !important;
+    animation: 3s linear .1s
+    
+}
+
+.icon p {
+    font-size: 10px;
+}
+

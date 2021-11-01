@@ -1,0 +1,25 @@
+.headerMain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #F0F4EF;
+    
+    border-bottom: 1px solid lightgray;
+    padding: 0px 15px 0 15px;
+    
+
+    
+}
+
+.avatar_info {
+    margin-left: 10px;
+}
+
+.avatar_info > h3 {
+    font-weight: 500;
+}
+
+.avatar_info > p {
+    color: grey;
+}

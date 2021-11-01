@@ -1,0 +1,69 @@
+.input {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+
+    margin: 50px
+}
+
+.pencil {
+    margin-left: auto;
+}
+
+.input_container {
+    display: flex;
+    align-items: center;
+    background-color: #F0F4EF;
+    border-radius: 25px;
+    width: calc(100% - 40px);    
+    border: none;
+    padding: 15px  
+}
+
+.input_container > form  {    
+    flex: 1;
+    display: flex;  
+    
+
+}
+
+.input_container > form > input {
+    flex: 1;    
+    background-color: #F0F4EF;
+    
+    margin-left: 10px;    
+    outline: none;
+    border: none
+
+}
+
+.input_container > form > button {
+    display: none
+}
+
+/* .input_container > form > button {   
+    position: absolute;
+    left: calc(); 
+    background-color: #08e2ff;
+    
+    margin-left: 10px;    
+    outline: none;
+    border: none
+
+} */
+
+.input .icon {
+    width: 20%;
+    margin-left: auto;
+    
+}
+
+.input_container > .MuiSvgIcon-root, 
+.icon > .MuiSvgIcon-root, 
+.input_container > .MuiSvgIcon-root {
+    color: grey;
+}
+
+
+
