@@ -1,6 +1,6 @@
 import "./Main.css"
-import Empty from "./Empty";
-import HeaderMain from "./HeaderMain"
+import Empty from "./Empty/Empty";
+import HeaderMain from "./HeaderMain/HeaderMain.js"
 import MainMessage from "./MainMessage"
 import MessagesInput from "./MessagesInput"
 

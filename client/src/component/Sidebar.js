@@ -8,7 +8,7 @@ const isTrue = true;
 
 function Sidebar() {
     return (
-      <div class="sidebar">
+      <div className="sidebar">
         <HeaderSideBar />
         <div className="message_sidebar">
           { isTrue ? <MessageBook /> : <Phonebook />}

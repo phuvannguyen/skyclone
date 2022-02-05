@@ -1,0 +1,28 @@
+.login {
+    margin:20px;
+    padding: 20px;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: #f0f4ef;
+
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+input {
+    padding: 5px;
+    margin: 5px;
+
+    outline: none;
+}
+
+/* first mobile */
+

@@ -1,0 +1,41 @@
+.authentication {
+    height: 100%;
+    width: 100%;
+    
+    margin: 0;
+    padding: 0;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.authen {    
+    background-color: #446DF6;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    
+    
+
+}
+.link {
+    padding: 5px;
+    margin: 20px 0 0 5px;
+    color: #0F110C;
+    background-color: #612940;
+    transition: background-color 2s;
+    transition-timing-function: ease-in-out;
+
+    border-radius: 5px;
+
+}
+.link:hover {
+    background-color: #9d6381;
+    
+
+}
