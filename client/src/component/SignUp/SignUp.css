@@ -1,22 +1,21 @@
-.login {
+.signup {
     margin:20px;
     padding: 20px;
     
     width:fit-content;
     height:fit-content;
-    
 
     background-color: #f0f4ef;  
     
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    
+    align-items: center;
     
 
 }
+
+
 
 form {
     display: flex;
@@ -42,9 +41,4 @@ label {
     display: block;
 }
 /* first mobile */
-@media (max-width = 800px) {
-    .login {
-        width: 
-    }
-    
-}
+

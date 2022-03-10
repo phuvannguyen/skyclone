@@ -1,7 +1,7 @@
 import express, { Router } from "express"
 import Users from "../models/user.js"
 import {authenToken} from "../middleware/auth.js"
-import { signin } from "../controllers/auth.js"
+import { signin, signup } from "../controllers/auth.js"
 // import {findAuthentication} from "../middleware/auth"
 
 const router = express.Router()
@@ -25,6 +25,7 @@ router.get("/users", (req, res) => {
   
   })
 router.post("/login", signin)
+router.post("/signup", signup)
 
 
 

@@ -15,7 +15,7 @@ export  const authenToken = (req, res, next) => {
     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err) => {
       if (err) {
         console.log("THis is token", token)
-        res.status("401 2 error")        
+        res.status("403")        
       };
       req.user = req.body;      
       next() 

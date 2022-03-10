@@ -1,7 +1,8 @@
 import "./Auth.css"
 import React from "react"
 import SignIn from "../Sign In/SignIn"
-import SignUp from "../SignUp"
+import SignUp from "../SignUp/SignUp"
+import ForgetPass from "../Forget Passs/forgetpass"
 import {
   BrowserRouter as Router,
   Switch,
@@ -21,20 +22,13 @@ export default function Auth() {
                         </Route>
                         <Route path="/signup">
                             <SignUp />
+                        </Route>
+                        <Route path="/forgot">
+                            <ForgetPass />
                         </Route>                
                     </Switch>
-                </div>
-                <div className="switch">
-                    <ul>
-                        <li>
-                            <Link to="/" className="link">Sign In</Link>
-                        </li>
-                        <li>
-                            <Link to="/signup" className="link">Sign Up</Link>
-                        </li>          
-                    </ul>
-                </div>
-                </div>           
+                </div>                
+            </div>           
             
         
         </Router>
