@@ -1,7 +1,7 @@
 import express, { Router } from "express"
 import Users from "../models/user.js"
 import {authenToken} from "../middleware/auth.js"
-import { signin, signup } from "../controllers/auth.js"
+import { signin, signup, signout } from "../controllers/auth.js"
 // import {findAuthentication} from "../middleware/auth"
 
 const router = express.Router()
@@ -12,7 +12,7 @@ router.get("/", authenToken, (req, res) => {
     
 })
 
-router.get("/users", (req, res) => {  
+router.get("/users", authenToken, (req, res) => {  
     Users.find((err, data ) => {    
       if (err) {
         res.status(500).send(err)
@@ -24,9 +24,9 @@ router.get("/users", (req, res) => {
   
   
   })
-router.post("/login", signin)
-router.post("/signup", signup)
-
+router.post("/api/auth/signin", signin)
+router.post("/api/auth/signup", signup)
+router.get("/api/auth/signout", signout)
 
 
 

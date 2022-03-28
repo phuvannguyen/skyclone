@@ -1,4 +1,4 @@
-import {SEND_MESSAGE} from "../Action/constants/action-type"
+import {SEND_MESSAGE, SET_MESSAGE, CLEAR_MESSAGE} from "../Action/constants/action-type"
 
 const getMessages = {content: "This is the first message"}
 export default function messages(state= getMessages, action) {
@@ -16,6 +16,10 @@ export default function messages(state= getMessages, action) {
 							text: message
 						}
 					}}
+		case SET_MESSAGE:
+			return {content: action.payload}
+		case CLEAR_MESSAGE:
+			return {content: ""}
 		default:
 			return state;
 	}

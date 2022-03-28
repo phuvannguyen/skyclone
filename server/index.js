@@ -8,13 +8,20 @@ import { Server } from "socket.io"
 import router from "./Router/index.js"
 import bodyParser from "body-parser"
 import dotenv from 'dotenv'
-
+import cors from "cors"
 
 
 //app config
 const app = express();
 dotenv.config();
 const port = process.env.PORT
+
+const corsOptions = {
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    preflightContinue: false,
+    optionsSuccessStatus: 204
+}
+app.use(cors(corsOptions))
 
 //middleware
 app.use(bodyParser.json())
@@ -26,11 +33,14 @@ const url = "mongodb+srv://phu1994:6298327@cluster0.rpsig.mongodb.net/message?re
 
 try {
     await mongoose.connect(url);
+    console.log("Connected with Mongodb")
   } catch (error) {
     console.log(error);
+    console.log("No connected with Mongodb")
   }
 
 //router
+
 app.use(router)
 
 //config socket
@@ -57,5 +67,5 @@ io.on("connection", (socket) => {
 
 
 server.listen(port, () => {
-    console.log("Hi 8080")
+    console.log("Hi port:" + port)
 })

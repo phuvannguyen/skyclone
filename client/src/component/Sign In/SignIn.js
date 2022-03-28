@@ -1,57 +1,56 @@
-import React, { useState } from 'react';
-import LockIcon from '@mui/icons-material/Lock';
+import React, {useRef} from 'react';
 import GoogleIcon from '@mui/icons-material/Google'
 import GitHubIcon from '@mui/icons-material/GitHub'
+
+import Form from "react-validation/build/form";
+import Input from "react-validation/build/input";
+import CheckButton from "react-validation/build/button";
+
 import "./SignIn.css"
 
-export default function SignIn() {
-    const [username, setName] = useState("");
-    const [password, setPass] = useState("");
-
-
-    const handleChangeName = (event) => {
-        // setName(event.target.value)
-        setName(event.target.value)
-    };
-
-    const handleChangePass = (event) => {
-        // setPass(event.target.value)
-        setPass(event.target.value)
+const required = value => {
+    if (!value) {
+        return (<div className='alert alert-danger'>
+            This field is required!
+        </div>)
     }
-    
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        alert('A name was submitted: ' + username +"pass:" + password);
+}
 
 
-    }
+export default function SignIn({handleSubmit, handleChangeName, handleChangePass, username, password}) {
+    const form = useRef();
+    const checkBtn = useRef();       
+
     return (
-        <div className="login">                                            
+        <div className="login">           
+
                 <div className="form">
                     <h1>Sign In</h1>                    
-                    <form onSubmit={(e) => handleSubmit(e)}>
-                        <input type="text" name="username"  placeholder="User name" 
-                                value = {username} onChange={(e) => handleChangeName(e)}/>                        
-                        <input type="password" name="password"  placeholder="Password" value = {password} onChange={(e) => handleChangePass(e)}/>
+                    <Form onSubmit={handleSubmit} ref={form}>
+                        <Input type="text" name="username"  placeholder="User name" 
+                                value = {username} onChange={handleChangeName} validations={[required]}/>                        
+                        <Input type="password" name="password"  placeholder="Password" value = {password} 
+                        onChange={handleChangePass} validations={[required]}/>
                         <a href="/forgot">Forget password?</a>
                         <label>
                             <input type="checkbox" /> 
                             Remember
                         </label>
-                        <input type="submit" value="Sign In" />                        
-                    </form>
+                        <button type="submit">Sign In</button>
+                        <CheckButton style={{ display: "none" }} ref={checkBtn} />                        
+                    </Form>
                 </div>
                 <h3>Don't have a account? <a href="/signup">Sign Up</a></h3>
                 <h3> Or login with </h3>
                 <div className="social">
                     <div className="google">
-                        <GoogleIcon />         
+                        <GoogleIcon />       
 
                     </div>
                     <div className="github">
                         <GitHubIcon />
                     </div>
-                </div>
+                </div>              
                 
                
         </div>
